@@ -1,6 +1,6 @@
 # finpay-deploy
 
-Deployment charts and manifests for **FinPay** — a fictional mid-size fintech company used in the [Octopus Deploy Enterprise Lab](https://github.com/TODO_ORG/octopus-enterprise-lab).
+Deployment charts and manifests for **FinPay** — a fictional mid-size fintech company used in the [Octopus Deploy Enterprise Lab](https://github.com/dmaizel/octopus-enterprise-lab).
 
 ## Structure
 
@@ -48,4 +48,4 @@ The `argocd-manifests/` directory contains plain Kubernetes YAML organized per e
 
 ## Getting Started
 
-This repo is a companion to the [Octopus Deploy Enterprise Lab](https://github.com/TODO_ORG/octopus-enterprise-lab). Fork it, then follow the lab guide.
+This repo is a companion to the [Octopus Deploy Enterprise Lab](https://github.com/dmaizel/octopus-enterprise-lab). Fork it, then follow the lab guide.
