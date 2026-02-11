@@ -1,0 +1,53 @@
+# ArgoCD Application definitions for payments-api
+# These map ArgoCD apps to Octopus projects/environments via annotations.
+#
+# Before applying:
+#   1. Replace <YOUR_USERNAME> with your GitHub username
+#   2. Ensure ArgoCD is installed (kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml)
+#   3. Ensure the Octopus ArgoCD Gateway is installed (via Octopus UI wizard)
+#
+# Apply with: kubectl apply -f argocd-manifests/applications.yaml
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: payments-api-dev
+  namespace: argocd
+  annotations:
+    argo.octopus.com/project: payments-api-argo
+    argo.octopus.com/environment: development
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/<YOUR_USERNAME>/finpay-deploy.git
+    targetRevision: main
+    path: argocd-manifests/payments-api/development
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: payments-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: payments-api-staging
+  namespace: argocd
+  annotations:
+    argo.octopus.com/project: payments-api-argo
+    argo.octopus.com/environment: staging
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/<YOUR_USERNAME>/finpay-deploy.git
+    targetRevision: main
+    path: argocd-manifests/payments-api/staging
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: payments-staging
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
