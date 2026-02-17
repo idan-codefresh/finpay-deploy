@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: "1.25-alpine"
+  repository: #{Octopus.Action.Package[finpay-payments-api].Path}
+  tag: #{Octopus.Action.Package[finpay-payments-api].PackageVersion}
   pullPolicy: IfNotPresent
 
 service:
