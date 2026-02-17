@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: #{Octopus.Action.Package[finpay-payments-api].Path}
+  repository: idanarbel/finpay-payments-api
   tag: #{Octopus.Action.Package[finpay-payments-api].PackageVersion}
   pullPolicy: IfNotPresent
 
