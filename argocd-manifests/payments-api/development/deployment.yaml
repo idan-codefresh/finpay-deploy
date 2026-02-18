@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: payments-api
-          image: idanarbel/finpay-payments-api:1.2.0
+          image: idanarbel/finpay-payments-api:1.2.1
           ports:
             - containerPort: 80
           env:
