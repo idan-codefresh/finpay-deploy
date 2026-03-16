@@ -6,7 +6,7 @@ metadata:
   labels:
     app: payments-api
 spec:
-  replicas: 2
+  #{namespace}replicas: 2
   selector:
     matchLabels:
       app: payments-api
