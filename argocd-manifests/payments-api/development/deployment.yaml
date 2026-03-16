@@ -5,7 +5,7 @@ metadata:
   namespace: payments-dev
   labels:
     app: payments-api
-spec1:
+spec:
   replicas: 2
   selector:
     matchLabels:
