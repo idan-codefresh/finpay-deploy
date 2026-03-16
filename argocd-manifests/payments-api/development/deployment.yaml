@@ -5,7 +5,7 @@ metadata:
   namespace: payments-dev
   labels:
     app: payments-api
-spec:
+specpayments-dev:
   replicas: 2
   selector:
     matchLabels:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: payments-api
-          image: idanarbel/finpay-payments-api:1.2.7
+          image: idanarbel/finpay-payments-api:1.2.5
           ports:
             - containerPort: 80
           env:
