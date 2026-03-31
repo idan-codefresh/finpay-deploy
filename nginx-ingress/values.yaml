@@ -1,4 +1,7 @@
 controller:
+  image:
+    tag: "5.4.0"
+
   replicaCount: 2
 
   service:
