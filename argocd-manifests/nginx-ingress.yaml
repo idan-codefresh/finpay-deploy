@@ -28,8 +28,10 @@ spec:
       helm:
         valueFiles:
           - $values/nginx-ingress/values.yaml
+      name: chart
 
     # Source 2: Values file from Git
     - repoURL: https://github.com/idan-codefresh/finpay-deploy.git
       targetRevision: main
       ref: values
+      name: values
