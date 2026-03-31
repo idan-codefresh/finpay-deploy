@@ -3,6 +3,9 @@ kind: Application
 metadata:
   name: nginx-ingress
   namespace: argocd
+  annotations:
+    argo.octopus.com/project.values: "my-argo"
+    argo.octopus.com/environment.values: "development"
 spec:
   project: default
   ignoreDifferences:
@@ -28,8 +31,10 @@ spec:
       helm:
         valueFiles:
           - $values/nginx-ingress/values.yaml
+      name: chart
 
     # Source 2: Values file from Git
     - repoURL: https://github.com/idan-codefresh/finpay-deploy.git
       targetRevision: main
       ref: values
+      name: values
