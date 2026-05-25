@@ -4,8 +4,8 @@ metadata:
   name: nginx-ingress
   namespace: argocd
   annotations:
-    argo.octopus.com/project.values: "my-argo"
-    argo.octopus.com/environment.values: "development"
+    argo.octopus.com/project: "my-argo"
+    argo.octopus.com/environment: "development"
 spec:
   project: default
   ignoreDifferences:
