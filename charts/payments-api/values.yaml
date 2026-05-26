@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: idanarbel/finpay-payments-api
-  tag: #{Octopus.Action.Package[finpay-payments-api].PackageVersion}
+  tag: 1.2.7
   pullPolicy: IfNotPresent
 
 service:
