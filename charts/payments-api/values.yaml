@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: idanarbel/finpay-payments-api
-  tag: 1.2.7
+  tag: 1.2.5
   pullPolicy: IfNotPresent
 
 service:
