@@ -60,6 +60,8 @@ metadata:
   annotations:
     argo.octopus.com/project: payments
     argo.octopus.com/environment: development
+    argo.octopus.com/image-replace-paths: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+
 spec:
   project: default
   source:
