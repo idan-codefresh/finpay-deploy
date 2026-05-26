@@ -65,7 +65,7 @@ spec:
   source:
     repoURL: https://github.com/idan-codefresh/finpay-deploy.git
     targetRevision: main
-    path: argocd-manifests/charts/payments-api
+    path: charts/payments-api
     helm:
       valueFiles:
         - values.yaml
