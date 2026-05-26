@@ -58,8 +58,8 @@ metadata:
   name: payments-api-helm
   namespace: argocd
   annotations:
-    argo.octopus.com/project: payments-api-helm
-    argo.octopus.com/environment: dev
+    argo.octopus.com/project: payments
+    argo.octopus.com/environment: development
 spec:
   project: default
   source:
